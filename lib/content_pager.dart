@@ -18,7 +18,7 @@ class ContentPager extends StatefulWidget {
 }
 
 class _ContentPagerState extends State<ContentPager> {
-  PageController _pageController = PageController(viewportFraction: 0.8);
+  PageController _pageController = PageController(viewportFraction: 1);
   @override
   void initState() {
     if (widget.contentPagerController != null) {
@@ -32,8 +32,6 @@ class _ContentPagerState extends State<ContentPager> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        //app bar
-        CustomAppBar(),
         Expanded(
           //撑开column高度
           child: PageView(
@@ -53,7 +51,7 @@ class _ContentPagerState extends State<ContentPager> {
 
   Widget _wrapItem(Widget widget) {
     return Padding(
-      padding: EdgeInsets.all(10),
+      padding:EdgeInsets.only(left: 5, right: 5, top: 35),
       child: widget,
     );
   }

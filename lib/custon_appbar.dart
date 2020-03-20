@@ -5,16 +5,16 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     double paddinfTop = MediaQuery.of(context).padding.top;
     return Container(
-      margin: EdgeInsets.fromLTRB(20, paddinfTop + 10, 20, 5),
+      margin: EdgeInsets.only(top: 10, bottom: 5),
       padding: EdgeInsets.fromLTRB(20, 7, 20, 7),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(19), color: Colors.white60),
+          borderRadius: BorderRadius.circular(19), color: Colors.white),
       child: Row(
         children: <Widget>[
           Icon(Icons.search, color: Colors.grey),
           Expanded(
             child: Text(
-              '长安十二时辰',
+              '更多精彩活动等你来',
               style: TextStyle(fontSize: 15, color: Colors.grey),
             ),
           ),
@@ -25,7 +25,7 @@ class CustomAppBar extends StatelessWidget {
             decoration: BoxDecoration(color: Colors.grey),
           ),
           Text(
-            '书城',
+            '搜索',
             style: TextStyle(fontSize: 13),
           )
         ],
